@@ -1,0 +1,74 @@
+# Jarvis v1.0.0 — what never belongs in the repository
+
+# ── Secrets ─────────────────────────────────────────────────────────────────
+config/api_keys.json          # your Gemini key and provider credentials
+config/contacts.json          # user-specific phone contacts
+config/telephony_history.json # runtime call log (SIP addresses, no audio)
+**/token*.json
+**/client_secret*.json
+*credentials*.json
+.env
+.env.*
+!.env.example
+
+# ── Generated at runtime ────────────────────────────────────────────────────
+config/memory.db
+config/memory.db-*
+config/memory_backups/
+config/reminders.db
+config/reminders.db-*
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.log
+logs/
+*.tmp
+*.bak
+Skills/.state.json            # enable/disable state only; packages stay on disk
+# User-installed Skills are user data. Ignoring their contents means a normal
+# source update cannot overwrite or delete them; only the placeholder is tracked.
+Skills/Installed/*
+!Skills/Installed/.gitkeep
+
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+env/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ── Frontend ────────────────────────────────────────────────────────────────
+frontend/node_modules/
+frontend/.vite/
+frontend/*.tsbuildinfo
+frontend/node_modules/.tmp/
+# Keep the built UI so `python main.py` works immediately after checkout and
+# so the wheel includes production assets without a Node.js install.
+!frontend/dist/
+!frontend/dist/**
+
+# ── Editors / OS ────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.freebuff/
+
+# Private configuration
+config/api_keys.json
+config/contacts.json
+config/telephony_history.json
+
+# Environment variables
+.env
+.env.*
+!.env.example

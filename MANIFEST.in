@@ -1,0 +1,26 @@
+include README.md
+include readme.md
+include CONTRIBUTING.md
+include CHANGELOG.md
+include LICENSE
+include THIRD_PARTY_LICENSES.md
+include requirements.txt
+include requirements-dev.txt
+include .env.example
+include core/prompt.txt
+recursive-include frontend/dist *
+recursive-include Skills/Builtin *
+include Skills/README.md
+
+exclude config/api_keys.json
+exclude config/contacts.json
+exclude config/memory.db
+exclude config/memory.db-*
+exclude config/memory_backups
+exclude config/reminders.db
+exclude config/telephony_history.json
+exclude .env
+recursive-exclude * __pycache__
+global-exclude *.py[cod]
+global-exclude *.log
+global-exclude *.tmp

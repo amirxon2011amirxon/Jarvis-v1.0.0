@@ -1,0 +1,6 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# Static package metadata and the LICENSE declaration live in setup.py
+# (license_files=["LICENSE"]), keeping the dependency list in one place.

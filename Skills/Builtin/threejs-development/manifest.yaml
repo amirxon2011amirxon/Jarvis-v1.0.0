@@ -1,0 +1,29 @@
+id: threejs-development
+name: Three.js Development
+version: 1.0.0
+description: >
+  Production Three.js and WebGL engineering: scene architecture, cameras,
+  lighting, materials, glTF integration, animation, interaction and real-time
+  rendering performance.
+author: Jarvis
+license: MIT
+
+metadata:
+  category: development
+  tags:
+    - threejs
+    - webgl
+    - 3d
+    - graphics
+    - animation
+    - performance
+
+requirements:
+  tools:
+    - file_control
+
+entrypoint: SKILL.md
+
+references:
+  - references/performance-checklist.md
+  - references/scene-recipes.md

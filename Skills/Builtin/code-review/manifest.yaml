@@ -1,0 +1,24 @@
+id: code-review
+name: Code Review
+version: 1.0.0
+description: >
+  Evidence-based code review focused on correctness, security, performance,
+  architecture and maintainability, with prioritized and actionable findings.
+author: Jarvis
+license: MIT
+
+metadata:
+  category: engineering
+  tags:
+    - review
+    - security
+    - correctness
+    - performance
+    - maintainability
+    - quality
+
+requirements:
+  tools:
+    - file_control
+
+entrypoint: SKILL.md

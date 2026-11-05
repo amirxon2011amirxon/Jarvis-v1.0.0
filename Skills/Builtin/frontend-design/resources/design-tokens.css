@@ -1,0 +1,79 @@
+/*
+ * Starter design tokens for a Jarvis frontend task.
+ *
+ * These are neutral defaults, not a finished visual direction. Replace the
+ * palette, type families and radii to fit the subject. Keep the semantic names
+ * so components do not depend on raw values.
+ */
+
+:root {
+  /* Colour — semantic */
+  --color-bg: #0b0b0c;
+  --color-surface: #131315;
+  --color-surface-raised: #1b1b1e;
+  --color-border: #2c2c31;
+  --color-border-strong: #44444b;
+  --color-text: #f2f0ea;
+  --color-text-muted: #a5a29a;
+  --color-text-subtle: #77746d;
+  --color-accent: #d8a63a;
+  --color-accent-contrast: #16130b;
+  --color-success: #3fb98a;
+  --color-warning: #d99a3a;
+  --color-danger: #d86464;
+  --color-focus: #ffd76a;
+
+  /* Typography */
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", monospace;
+
+  --text-display: clamp(3rem, 7vw, 6.5rem);
+  --text-h1: clamp(2.25rem, 4.5vw, 4rem);
+  --text-h2: clamp(1.75rem, 3vw, 2.5rem);
+  --text-h3: 1.375rem;
+  --text-body-lg: 1.125rem;
+  --text-body: 1rem;
+  --text-label: 0.8125rem;
+  --text-caption: 0.75rem;
+
+  --leading-display: 1;
+  --leading-heading: 1.15;
+  --leading-body: 1.6;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* Shape and elevation */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+  --shadow-raised: 0 18px 48px rgb(0 0 0 / 35%);
+  --shadow-focus: 0 0 0 3px rgb(255 215 106 / 35%);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --duration-fast: 140ms;
+  --duration-base: 220ms;
+  --duration-slow: 320ms;
+
+  /* Layout */
+  --measure: 65ch;
+  --content-width: 76rem;
+  --gutter: clamp(1.25rem, 4vw, 4rem);
+}
+
+/*
+ * Dark-first is a starting surface, not a requirement. If the subject calls
+ * for paper, linen, stone or daylight, build that palette instead and keep the
+ * semantic token names.
+ */

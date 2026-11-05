@@ -1,0 +1,24 @@
+id: ui-ux-design
+name: UI/UX Design
+version: 1.0.0
+description: >
+  User experience and interaction design: task flows, information architecture,
+  usability, feedback, accessibility and interface consistency.
+author: Jarvis
+license: MIT
+
+metadata:
+  category: design
+  tags:
+    - ux
+    - ui
+    - interaction
+    - usability
+    - accessibility
+    - information-architecture
+
+requirements:
+  tools:
+    - file_control
+
+entrypoint: SKILL.md

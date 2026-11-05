@@ -1,0 +1,24 @@
+id: python-development
+name: Python Development
+version: 1.0.0
+description: >
+  Maintainable Python engineering: module boundaries, type hints, explicit error
+  handling, async design, testing and long-term code health.
+author: Jarvis
+license: MIT
+
+metadata:
+  category: development
+  tags:
+    - python
+    - backend
+    - typing
+    - async
+    - testing
+    - maintainability
+
+requirements:
+  tools:
+    - file_control
+
+entrypoint: SKILL.md

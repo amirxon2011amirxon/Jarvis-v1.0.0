@@ -1,0 +1,74 @@
+# ── Jarvis v1.0.0 — Python dependencies ────────────────────────────────────────────
+# The app: a microphone, a speaker and the Gemini Live API. The only
+# conversation engine is Gemini Live, so there is no provider dependency block.
+#
+# Version bounds: the lower bound is what the app is developed against, the
+# upper bound stops the next MAJOR release of a dependency from breaking every
+# fresh clone on the day it ships. Minor and patch updates flow in freely.
+
+# ── Core: audio, Gemini Live ─────────────────────────────────────────────────
+# The default and only interface is the local React web UI in `frontend/`,
+# served by FastAPI; there is no desktop toolkit dependency.
+sounddevice>=0.4,<1
+numpy>=1.24,<3
+# G.711 (PCMU/PCMA) codec helpers for the SIP/RTP telephony engine. Python
+# 3.13 removed the stdlib audioop module; audioop-lts restores its API.
+audioop-lts>=0.2.1; python_version >= "3.13"
+# SRTP (SDES AES_CM_128_HMAC_SHA1_80) is mandatory for calls from the Linphone
+# mobile client; pylibsrtp ships Windows wheels and wraps libsrtp.
+pylibsrtp>=1.0,<2
+google-genai>=2.8.0,<3
+psutil>=5.9,<8
+# Skills packages use structured YAML manifests (Skills/Engine/discovery.py).
+pyyaml>=6,<7
+# Screen understanding (actions/screen_understanding_tool.py): mss captures
+# the primary display. pillow is NOT a capture dependency — it is the image
+# encoder that turns each frame into the JPEG the Live API's video input
+# expects; resize + encode cannot be done without it.
+mss>=10,<11
+pillow>=11,<13
+
+# ── Local web interface ───────────────────────────────────────────────────────
+# FastAPI serves the built React assets and the HTTP/WebSocket boundary.
+# uvicorn + websockets keep that server loopback-only and streaming-capable.
+fastapi>=0.115,<1
+uvicorn>=0.30,<1
+websockets>=13,<17
+
+# ── Document reading and editing ─────────────────────────────────────────────
+# read_document_tool.py reads every format locally; file_control_tool.py edits
+# the structured formats. These are mature pure-Python parsers/writers with
+# Windows wheels. Legacy DOC/PPT reading additionally uses an installed
+# LibreOffice converter when present; no conversion stack is installed here.
+python-docx>=1.1,<2
+openpyxl>=3.1,<4
+python-pptx>=0.6,<2
+pypdf>=4,<7
+ebooklib>=0.18,<1
+odfpy>=1.4,<2
+striprtf>=0.0.26,<1
+xlrd>=2.0,<3
+charset-normalizer>=3.3,<4
+# IANA zone detection for scheduler daylight-saving correctness. If absent,
+# the scheduler falls back to the system fixed offset.
+tzlocal>=5,<6
+
+# ── Web research ─────────────────────────────────────────────────────────────
+# web_fetch_tool.py: direct HTTP fetching (httpx), readable-text extraction
+# (beautifulsoup4) and DuckDuckGo search. Fetching a URL works without the
+# search package; search reports a clear error if no route answers.
+# ddgs is optional (the lite endpoint is the primary no-dependency route).
+httpx>=0.28,<1
+beautifulsoup4>=4.12,<5
+ddgs>=9,<10
+
+# ── Windows browser control ──────────────────────────────────────────────────
+# close_web_tool reads and closes tabs in the user's real Brave session through
+# Windows UI Automation. comtypes is the COM bridge for that API. It is also a
+# transitive dependency of optional pycaw, but tab closing is not optional.
+comtypes>=1.2; sys_platform == "win32"
+
+# ── Optional: per-device volume slider on Windows ─────────────────────────────
+# Without it the audio panel still works; it simply does not show a volume
+# slider. Everything else is unaffected.
+pycaw>=20240210; sys_platform == "win32"

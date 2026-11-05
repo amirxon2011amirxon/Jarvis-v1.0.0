@@ -1,0 +1,30 @@
+id: web-development
+name: Web Development
+version: 1.0.0
+description: >
+  Architecture and production engineering for modern web applications:
+  TypeScript boundaries, React structure, frontend/backend integration,
+  performance, testing and deployment readiness.
+author: Jarvis
+license: MIT
+
+metadata:
+  category: development
+  tags:
+    - web
+    - typescript
+    - react
+    - architecture
+    - performance
+    - testing
+
+requirements:
+  tools:
+    - file_control
+    - web_fetch
+
+entrypoint: SKILL.md
+
+references:
+  - references/react-architecture.md
+  - references/performance-and-testing.md

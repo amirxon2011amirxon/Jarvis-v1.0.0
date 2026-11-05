@@ -1,0 +1,34 @@
+id: frontend-design
+name: Frontend Design
+version: 1.0.0
+description: >
+  Professional visual design and implementation for sophisticated websites and
+  web applications, with an emphasis on hierarchy, typography, responsive
+  composition, accessibility and avoiding generic AI-generated aesthetics.
+author: Jarvis
+license: MIT
+
+metadata:
+  category: development
+  tags:
+    - frontend
+    - design
+    - typography
+    - responsive
+    - accessibility
+    - ui
+
+requirements:
+  tools:
+    - file_control
+    - open_web
+
+entrypoint: SKILL.md
+
+references:
+  - references/visual-quality-checklist.md
+  - references/typography-and-spacing.md
+  - references/motion-and-polish.md
+
+resources:
+  - resources/design-tokens.css

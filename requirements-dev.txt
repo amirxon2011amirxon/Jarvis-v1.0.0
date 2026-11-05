@@ -1,0 +1,6 @@
+# Development and test-only tooling. Runtime dependencies live in requirements.txt.
+-r requirements.txt
+
+pytest>=8,<10
+ruff>=0.9,<1
+playwright>=1.45,<2

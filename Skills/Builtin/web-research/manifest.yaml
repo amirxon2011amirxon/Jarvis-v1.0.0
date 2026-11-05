@@ -1,0 +1,25 @@
+id: web-research
+name: Web Research
+version: 1.0.0
+description: >
+  Structured web research with source-quality assessment, cross-referencing,
+  contradiction analysis, evidence-based synthesis and precise citations.
+author: Jarvis
+license: MIT
+
+metadata:
+  category: research
+  tags:
+    - research
+    - web
+    - verification
+    - sources
+    - citations
+    - analysis
+
+requirements:
+  tools:
+    - web_fetch
+    - open_web
+
+entrypoint: SKILL.md
